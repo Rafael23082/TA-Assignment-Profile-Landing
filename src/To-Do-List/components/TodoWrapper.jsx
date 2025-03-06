@@ -50,33 +50,35 @@ export const TodoWrapper = () => {
 
     return (
         <>
-        <div className="max-w-lg mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
-            <h1 className="text-2xl font-bold text-center text-gray-800 mb-4">To-Do List</h1>
-            <div className="flex justify-between mb-4">
-                <button onClick={toggleCompletedFilter} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-                    {showCompleted ? 'Show All' : 'Show Completed'}
-                </button>
-            </div>
+        <div className='w-[100%] h-[100vh] flex items-center justify-center'>
+            <div className="max-w-lg mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
+                <h1 className="text-2xl font-bold text-center text-gray-800 mb-4">To-Do List</h1>
+                <div className="flex justify-between mb-4">
+                    <button onClick={toggleCompletedFilter} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                        {showCompleted ? 'Show All' : 'Show Completed'}
+                    </button>
+                </div>
 
-            <TodoForm addToDo={addToDo} />
-            <div className="mt-4 space-y-3">
-                {filteredTasks.map(todo => (
-                    todo.isEditing ? (
-                        <EditTodoForm key={todo.id} editToDo={editTask} task={todo} />
-                    ) : (
-                        <Todo
-                            key={todo.id}
-                            task={todo}
-                            toggleComplete={toggleComplete}
-                            deleteToDo={deleteToDo}
-                            editToDo={editToDo}
-                            onToggle={handleToggle}
-                        />
-                    )
-                ))}
+                <TodoForm addToDo={addToDo} />
+                <div className="mt-4 space-y-3">
+                    {filteredTasks.map(todo => (
+                        todo.isEditing ? (
+                            <EditTodoForm key={todo.id} editToDo={editTask} task={todo} />
+                        ) : (
+                            <Todo
+                                key={todo.id}
+                                task={todo}
+                                toggleComplete={toggleComplete}
+                                deleteToDo={deleteToDo}
+                                editToDo={editToDo}
+                                onToggle={handleToggle}
+                            />
+                        )
+                    ))}
+                </div>
             </div>
+            <button onClick={() => {navigate("/")}} className='absolute min-w-[100px] bottom-0 left-0 mb-[5em] ml-[4em] w-[10%] p-[1em] rounded-[10px] bg-blue-500 text-white'>Back</button>
         </div>
-        <Button color="bg-blue-500" hover = "hover:bg-blue-800" message = "Back" navigateTo="/"></Button>
         </>
     );
 };
