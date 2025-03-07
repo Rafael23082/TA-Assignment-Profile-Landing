@@ -50,8 +50,8 @@ export const TodoWrapper = () => {
 
     return (
         <>
-        <div className='w-[100%] h-[100vh] flex items-center justify-center'>
-            <div className="max-w-lg mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg max-w-[500px]">
+        <div className='w-[100%] h-[100vh] flex items-center justify-center flex-col sm:flex-row'>
+            <div className="mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg max-w-[500px]">
                 <h1 className="text-2xl font-bold text-center text-gray-800 m-8">To-Do List</h1>
                 <div className="flex justify-between mb-4">
                     <button onClick={toggleCompletedFilter} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
@@ -77,7 +77,7 @@ export const TodoWrapper = () => {
                     ))}
                 </div>
             </div>
-            <button onClick={() => {navigate("/")}} className='absolute min-w-[100px] bottom-0 left-0 mb-[5em] ml-[4em] w-[10%] p-[1em] rounded-[10px] bg-blue-500 text-white'>Back</button>
+            <button onClick={() => {navigate("/")}} className='sm:absolute min-w-[100px] sm:bottom-0 sm:left-0 sm:mb-[5em] sm:ml-[4em] p-[1em] rounded-[10px] bg-blue-500 text-white m-8 sm:m-0'>Back</button>
         </div>
         </>
     );
