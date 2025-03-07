@@ -9,7 +9,7 @@ export const Profile = () => {
                     <div className="mt-[1em] w-[50%] md:w-[40%] max-w-[500px] aspect-[1/1] overflow-hidden">
                         <img className="object-center object-cover w-[100%] h-[100%]" src="image.jpg" />
                     </div>
-                    <p className="mt-4">Name: Rafael Anderson</p>
+                    <p className="mt-4" style={{fontSize: "clamp(1rem, 12vw, 2rem)" }}>Name: Rafael Anderson</p>
                     <p className="mt-1 w-80 text-center">Hello! My name is Rafael Anderson of the L4AC Class. Nice to meet you!</p>
                     <div className="w-full flex justify-center">
                         <Button color="bg-blue-500" hover = "hover:bg-blue-800" message = "Back" navigateTo="/"></Button>

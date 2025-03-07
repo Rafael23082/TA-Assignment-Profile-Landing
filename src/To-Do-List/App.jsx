@@ -1,5 +1,4 @@
 import { TodoWrapper } from './components/TodoWrapper'
-import './index.css'
 import { LandingPage } from './components/LandingPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Profile } from './components/Profile';

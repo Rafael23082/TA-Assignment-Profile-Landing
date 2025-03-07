@@ -51,8 +51,8 @@ export const TodoWrapper = () => {
     return (
         <>
         <div className='w-[100%] h-[100vh] flex items-center justify-center'>
-            <div className="max-w-lg mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
-                <h1 className="text-2xl font-bold text-center text-gray-800 mb-4">To-Do List</h1>
+            <div className="max-w-lg mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg max-w-[500px]">
+                <h1 className="text-2xl font-bold text-center text-gray-800 m-8">To-Do List</h1>
                 <div className="flex justify-between mb-4">
                     <button onClick={toggleCompletedFilter} className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
                         {showCompleted ? 'Show All' : 'Show Completed'}
@@ -60,7 +60,7 @@ export const TodoWrapper = () => {
                 </div>
 
                 <TodoForm addToDo={addToDo} />
-                <div className="mt-4 space-y-3">
+                <div className={`mt-4 space-y-3 ${toDos.length === 0 ? "" :  "h-auto max-h-[200px] overflow-y-auto"}`}>
                     {filteredTasks.map(todo => (
                         todo.isEditing ? (
                             <EditTodoForm key={todo.id} editToDo={editTask} task={todo} />
