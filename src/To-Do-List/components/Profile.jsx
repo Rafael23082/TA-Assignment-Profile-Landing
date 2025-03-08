@@ -6,7 +6,7 @@ export const Profile = () => {
             <div className="flex items-center justify-center w-[100%] h-[100vh]">
                 <div className="flex flex-col justify-center items-center">
                     <p className="text-4xl mt-[1em]">My Profile</p>
-                    <div className="mt-[1em] w-[50%] md:w-[40%] max-w-[500px] aspect-[1/1] overflow-hidden">
+                    <div className="mt-[1em] w-[50%] md:w-[40%] min-w-[200px] max-w-[500px] aspect-[1/1] overflow-hidden rounded-[1000px] border-black border">
                         <img className="object-center object-cover w-[100%] h-[100%]" src="image.jpg" />
                     </div>
                     <p className="mt-4" style={{fontSize: "clamp(1rem, 12vw, 2rem)" }}>Name: Rafael Anderson</p>
