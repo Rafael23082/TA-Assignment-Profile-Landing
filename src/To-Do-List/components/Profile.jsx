@@ -4,7 +4,7 @@ export const Profile = () => {
     return (
         <>
             <div className="flex items-center justify-center w-[100%] h-[100vh]">
-                <div className="p-3 shadow-2xl rounded-[10px] xl:p-8">
+                <div className="p-3 sm:shadow-2xl sm:rounded-[10px] xl:p-8">
                     <div className="flex flex-col justify-center items-center">
                         <p className="text-4xl">My Profile</p>
                         <div className="mt-[1em] w-[50%] md:w-[40%] min-w-[200px] max-w-[500px] aspect-[1/1] overflow-hidden rounded-[1000px] border-black border">
